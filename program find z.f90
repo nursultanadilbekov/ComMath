@@ -1,17 +1,17 @@
 program find z
     implicit none
     integer :: n
-    real(8) :: e
+    real(8) :: z
     n = 0
-    e = 2.0d0
+    z = 2.0d0
 
     do
         n = n + 1
-        e = e / 10.0d0
-        print*, 'Iteration ', n, ': e = ', e
+        z = z / 10.0d0
+        print*, 'Iteration ', n, ': z = ', z
 
-        if (2.0d0 * e == e) exit
+        if (2.0d0 * z == z) exit
     end do
 
     print*, 'Number of iterations: ', n
-end program epsilon_check
+end program find z
