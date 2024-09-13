@@ -1,4 +1,4 @@
-program find epsilon
+program find_epsilon
     implicit none
     integer :: n
     real(8) :: e
@@ -14,4 +14,4 @@ program find epsilon
     end do
 
     print*, 'Number of iterations: ', n
-end program find epsilon
+end program find_epsilon

@@ -1,4 +1,4 @@
-program find i
+program find_i
     implicit none
     integer :: n
     real(8) :: i
@@ -14,4 +14,4 @@ program find i
     end do
 
     print*, 'Number of iterations: ', n
-end program find i
+end program find_i
