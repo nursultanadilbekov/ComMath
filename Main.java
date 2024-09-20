@@ -1,52 +1,55 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        StringBuilder binary = new StringBuilder();
-        int choice;
-        do {
-            System.out.println("1. Enter the integer \n2. End the program");
-            choice = scanner.nextInt();
 
-            System.out.print("Enter a decimal number: ");
-            double decimal = scanner.nextDouble();
+            double decimal = 0.5;
+            int limit = 10;
+            int n = 0;
+            
+            int[] binary = new int[32];
+            int[] binary1 = new int[limit];
 
             int IntDecimal = (int) decimal;
             double decimal1 = decimal - IntDecimal;
 
-            System.out.println(IntDecimal);
-            System.out.println(decimal1);
-
             if (IntDecimal == 0) {
-                binary.append("0");
+                binary[n++] = 0;
             } else{
                 while (IntDecimal > 0) {
                     int remainder = IntDecimal % 2;
                     if(remainder==1){
-                        binary.append("1");
+                        binary[n++]=1;
                     }
                     else{
-                        binary.append("0");
+                        binary[n++] = 0;
                     }
                     IntDecimal = IntDecimal / 2;
                 }
             }
-            binary.reverse();
+
+            for(int i = n-1; i>=0; i--) {
+                System.out.print(binary[i]);
+            }
+
+            if(decimal1!=0){
+                System.out.print(".");
+            }
+
+            n = 0;
+
             if(decimal1>0){
                 while (decimal1 > 0) {
                     decimal1 *= 2;
                     if (decimal1 >= 1) {
-                        binary.append("1");
+                        binary1[n++] = 1;
                         decimal1 -= 1;
                     } else {
-                        binary.append("0");
+                        binary1[n++] = 0;
                     }
                 }
             }
-            System.out.println(binary);
-            binary.setLength(0);
-        } while (choice != 2);
+            for(int i = 0; i<n; i++){
+                System.out.print(binary1[i]);
+            }
     }
 }
