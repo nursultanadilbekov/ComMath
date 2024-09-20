@@ -2,8 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-            double decimal = 0.5;
-            int limit = 10;
+            double decimal = 7.6;
+            int limit = 1000;
             int n = 0;
             
             int[] binary = new int[32];
@@ -34,11 +34,9 @@ public class Main {
             if(decimal1!=0){
                 System.out.print(".");
             }
-
-            n = 0;
-
+            n=0;
             if(decimal1>0){
-                while (decimal1 > 0) {
+                while (decimal1 > 0 && n < limit) {
                     decimal1 *= 2;
                     if (decimal1 >= 1) {
                         binary1[n++] = 1;
