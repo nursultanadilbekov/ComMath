@@ -6,20 +6,20 @@ public class Main
 
 		Random random = new Random();
 
-		double a = 10;
-		double b = -10;
+		double a = 3;
+		double b = 2;
 		double c = a-b;
 		double x;
 		int i = 0;
-		double S = 0;
-		int M = 10000;
+		double Sum = 0;
+		int M = 100000000;
 		do{
 			double r = a + (b - a) * random.nextDouble();
 			x=r;
 			double function = x*x-2;
-			S=S+function;
+			Sum=Sum+function;
 			i++;
 		}while(i<M);
-		System.out.println(S/i*c);
+		System.out.println(Sum/i*c);
 	}
 }
