@@ -12,15 +12,14 @@ public class Main
 		double x;
 		int i = 0;
 		double S = 0;
+		int M = 10000;
 		do{
 			double r = a + (b - a) * random.nextDouble();
 			x=r;
 			double function = x*x-2;
-			S=S+r*function;
+			S=S+function;
 			i++;
-			if (i==99){
-				System.out.println(S/i*c);
-			}
-		}while(i<100);
+		}while(i<M);
+		System.out.println(S/i*c);
 	}
 }
