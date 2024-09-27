@@ -6,8 +6,8 @@ public class Main
 
 		Random random = new Random();
 
-		double a = 3;
-		double b = 2;
+		double a = Math.PI*3/2;
+		double b = Math.PI;
 		double c = a-b;
 		double x;
 		int i = 0;
@@ -16,7 +16,7 @@ public class Main
 		do{
 			double r = a + (b - a) * random.nextDouble();
 			x=r;
-			double function = x*x-2;
+			double function = Math.sin(x);
 			Sum=Sum+function;
 			i++;
 		}while(i<M);
